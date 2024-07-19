@@ -1,5 +1,13 @@
 from manim import *
 import os
+from pathlib import Path
+
+FLAGS = f"-pqm"
+SCENE = "Solution"
+
+'''
+    q: quality [l,m,h] stands for low, medium, high
+'''
 
 class Solution(Scene):
     def setup(self):
@@ -18,4 +26,5 @@ class Solution(Scene):
         self.add(*dots)
 
 if __name__ == "__main__":
-    os.system(r"manim --disable_caching -v WARNING 02_EX_01.py Solution -qm ")
+    script_name = f"{Path(__file__).resolve()}"
+    os.system(f"manim {script_name} {SCENE} {FLAGS}")
