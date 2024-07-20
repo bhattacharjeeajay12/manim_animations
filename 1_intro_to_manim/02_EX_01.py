@@ -25,18 +25,18 @@ class Solution(Scene):
             for y in y_range
         ]
 
-        black_button = Rectangle(fill_opacity=0.2, color=RED)
-
-        print(black_button.get_center(),
-              black_button.get_left(),
-              black_button.get_right(),
-              black_button.get_top(),
-              black_button.get_bottom()
-              )
+        # black_button = Rectangle(fill_opacity=0.2, color=RED)
+        #
+        # print(black_button.get_center(),
+        #       black_button.get_left(),
+        #       black_button.get_right(),
+        #       black_button.get_top(),
+        #       black_button.get_bottom()
+        #       )
 
         self.add(*dots)
-        self.add(black_button)
-        self.add(black_button.copy().move_to([4,2,0]))
+        # self.add(black_button)
+        # self.add(black_button.copy().move_to([4,2,0]))
 
 
 if __name__ == "__main__":

@@ -34,13 +34,23 @@ class Solution(Scene):
         for color, radius in zip(colors, radii):
             arc = Arc(
                 radius=radius,
-                angle=PI / 3,
+                start_angle=PI/4,
+                angle=PI / 2,
                 stroke_width=6,
                 stroke_color=color,
             )
 
-            angle_radians = get_angle(arc.get_center(), UP)
-            wifi_waves.add(arc.rotate(angle_radians, about_point=ORIGIN))
+            # # option 1
+            # angle_radians = get_angle(arc.get_center(), UP)
+            # wifi_waves.add(arc.rotate(angle_radians, about_point=ORIGIN))
+
+            # # option 2
+            # angle_with_x_axis = arc.angle / 2  # As the arc angle is centered
+            # # Calculate the rotation angle to make it perpendicular
+            # rotation_angle = PI / 2 - angle_with_x_axis
+            # # Rotate the arc
+            # arc.rotate(rotation_angle, about_point=ORIGIN)
+
             wifi_waves.add(arc)
 
         # Create the small circle at the base
