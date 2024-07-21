@@ -6,6 +6,9 @@ import numpy as np
 FLAGS = f"-pqm"
 SCENE = "Solution"
 
+CONFIG_FLAG = f"-c"
+CONFIG_FILE = "config-file-1.cfg"
+
 
 def get_angle(point_1, point_2):
     dot_product = np.dot(point_1, point_2)
@@ -66,4 +69,5 @@ class Solution(Scene):
 
 if __name__ == "__main__":
     script_name = f"{Path(__file__).resolve()}"
+    # os.system(f"manim {script_name} {SCENE} {FLAGS} {CONFIG_FLAG} {CONFIG_FILE}")
     os.system(f"manim {script_name} {SCENE} {FLAGS}")
