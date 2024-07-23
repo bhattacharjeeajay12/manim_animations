@@ -3,7 +3,7 @@ from manim import *
 import os
 from pathlib import Path
 
-FLAGS = f"-pqh"
+FLAGS = f"-pqm"
 SCENE = "Solution"
 
 
